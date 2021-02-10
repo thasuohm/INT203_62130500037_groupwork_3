@@ -22,26 +22,24 @@
 
 <body class = "bg-blue-300">
  
-  <div id="app" class = 'text-center max-w-4xl mx-auto '>
-    <h1 class="text-3xl text-center mt-8 bg-gray-300 p-5">Count of your Favorite Character ( {{ countLike }} )</h1>
+  <div id="app" class = ' max-w-6xl mx-auto '>
+    <h1 class="text-3xl text-center mt-8 bg-gray-300 p-5">Count of your Favorite Character in Doraemon ( {{ countLike }} )</h1>
 
-    
-    <ul class ="mt-8 flex bg-gray-300" >
+    <div class = "">
+    <ul class ="mt-8 pt-8  bg-gray-300 grid grid-cols-3 justify-items-center" > 
+      
+      
       <li v-for="(image,index) in gallery">
-
-     
-      <button v-on:click="favorite(index)">
-      <img :src = "image.images" class = "w-72 h-44 ml-2 mt-2 inline">
+      <button v-on:click="favorite(index)" class = "">
+      <img :src = "image.images" class = "w-72 h-44  mt-2 inline">
       </button>
-      
-      
-      <h1 class="mt-2 text-xl"><b>{{image.name}}</b><span v-show="image.fav">
-      <img class = "inline ml-2" :src = "favicon"></span></h1> 
-    
-    
+   
+      <h1 class="mt-2 mb-4 text-xl "><b>{{image.name}}</b><span v-show="image.fav">
+      <img class = "inline ml-2 " :src = "favicon"></span></h1> 
     </li>
+
     </ul>
-  
+  </div>
 </div>
   <!-- my main.js -->
   <script src="./main.js"></script>
